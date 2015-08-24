@@ -13,7 +13,7 @@ installer.sh
 
 ## Configuration
 
-Only thing it needs from you by default is Github API token. You can obtain it from (github personal access tokens)[https://github.com/settings/tokens] page.
+Only thing it needs from you by default is Github API token. You can obtain it from [github personal access tokens](https://github.com/settings/tokens) page.
 
 ```
 export GITHUB_MANAGER_API_TOKEN="<40 characters API token>"
