@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
+$LOAD_PATH.unshift('/usr/local/lib/github-manager/lib')
+
+require 'octokit'
+require 'table_print'
+require 'awesome_print'
+
+# Project specific modules
+require 'configuration'
+require 'parameters'
+require 'plugins'
+require 'printer'
+require 'misc.rb'
+
+$version    = '0.0.1'
+$connection = nil
+$debug      = 0
+$plugin     = nil
+
+class Ghm
+  def initialize
+    $params = Parameters.parse
+    $config = Configuration.parse
+    # Using dummy plugin to check if everything works.
+    Printer.print("success", "Authenticated as #{Plugins::Whoami.run}")
+    Parameters.act
+  end
+end
+
+if (__FILE__ == $0)
+  ghm = Ghm.new
+end

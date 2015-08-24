@@ -1,0 +1,25 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.8)
+    awesome_print (1.6.1)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    multipart-post (2.0.0)
+    octokit (4.0.1)
+      sawyer (~> 0.6.0, >= 0.5.3)
+    sawyer (0.6.0)
+      addressable (~> 2.3.5)
+      faraday (~> 0.8, < 0.10)
+    table_print (1.5.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  octokit
+  table_print
+
+BUNDLED WITH
+   1.10.6
